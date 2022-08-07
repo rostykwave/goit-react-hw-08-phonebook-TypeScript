@@ -1,0 +1,1 @@
+export { EditContactForm } from './EditContactForm';
