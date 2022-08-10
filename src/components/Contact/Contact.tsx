@@ -2,10 +2,11 @@ import { IconButton, Typography } from '@mui/material';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 import EditIcon from '@mui/icons-material/Edit';
 import { Box } from '@mui/system';
+import { IContact } from 'types/contact';
 
 interface IProps {
-  contact: { id: string; name: string; number: string };
-  onEditContact: (person: { id: string; name: string; number: string }) => void;
+  contact: IContact;
+  onEditContact: (person: IContact) => void;
   onDeleteContact: (id: string) => void;
 }
 
