@@ -1,13 +1,13 @@
 import { getFilter } from 'redux/contacts/contacts-selectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { contactsActions } from 'redux/contacts';
-// import { contactsActions } from 'redux/contacts';
 import { TextField } from '@mui/material';
 
-export const Filter = () => {
+export const Filter: React.FC = () => {
   const value = useSelector(getFilter);
   const dispatch = useDispatch();
-  const onChange = e => dispatch(contactsActions.changeFilter(e.target.value));
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    dispatch(contactsActions.changeFilter(e.target.value));
 
   return (
     <TextField

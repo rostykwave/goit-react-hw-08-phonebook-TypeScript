@@ -17,11 +17,11 @@ export const ContactListSection = () => {
 
   const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
-  const onDeleteContact = id => dispatch(contactsOperations.deleteContact(id));
   const onEditContact = person => {
     setIsEdit(true);
     setEditPerson(person);
   };
+  const onDeleteContact = id => dispatch(contactsOperations.deleteContact(id));
 
   return (
     <List>
